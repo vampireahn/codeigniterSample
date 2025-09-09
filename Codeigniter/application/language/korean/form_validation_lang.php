@@ -1,0 +1,32 @@
+<?php
+	defined('BASEPATH') or exit('No direct script access allowed');
+	
+	$lang['form_validation_required'] = '{field} 필드는 필수입니다.';
+	$lang['form_validation_isset'] = '{field} 필드는 값을 가져야 합니다.';
+	$lang['form_validation_valid_email'] = '{field} 필드는 유효한 이메일 주소를 포함해야 합니다.';
+	$lang['form_validation_valid_emails'] = '{field} 필드는 유효한 이메일 주소들을 포함해야 합니다.';
+	$lang['form_validation_valid_url'] = '{field} 필드는 유효한 URL을 포함해야 합니다.';
+	$lang['form_validation_valid_ip'] = '{field} 필드는 유효한 IP를 포함해야 합니다.';
+	$lang['form_validation_min_length'] = '입력하신 {field}의 길이는 {param}자 이상이어야 합니다.';
+	$lang['form_validation_max_length'] = '{field} 필드는 최대 {param}자를 초과할 수 없습니다.';
+	$lang['form_validation_exact_length'] = '{field} 필드는 정확히 {param}자여야 합니다.';
+	$lang['form_validation_alpha'] = '{field} 필드는 영문자만 포함할 수 있습니다.';
+	$lang['form_validation_alpha_numeric'] = '{field} 필드는 영문자와 숫자만 포함할 수 있습니다.';
+	$lang['form_validation_alpha_numeric_spaces'] = '{field} 필드는 영문자, 숫자, 공백만 포함할 수 있습니다.';
+	$lang['form_validation_alpha_dash'] = '{field} 필드는 영문자, 숫자, 밑줄(_), 대시(-)만 포함할 수 있습니다.';
+	$lang['form_validation_numeric'] = '{field} 필드는 숫자만 포함할 수 있습니다.';
+	$lang['form_validation_is_numeric'] = '{field} 필드는 숫자만 포함할 수 있습니다.';
+	$lang['form_validation_integer'] = '{field} 필드는 정수여야 합니다.';
+	$lang['form_validation_regex_match'] = '{field} 필드가 올바른 형식이 아닙니다.';
+	$lang['form_validation_matches'] = '{field} 필드가 {param} 필드와 일치하지 않습니다.';
+	$lang['form_validation_differs'] = '{field} 필드는 {param} 필드와 달라야 합니다.';
+	$lang['form_validation_is_unique'] = '{field} 필드는 고유한 값을 가져야 합니다.';
+	$lang['form_validation_is_natural'] = '{field} 필드는 양수만 포함할 수 있습니다.';
+	$lang['form_validation_is_natural_no_zero'] = '{field} 필드는 0보다 큰 양수만 포함할 수 있습니다.';
+	$lang['form_validation_decimal'] = '{field} 필드는 십진수를 포함해야 합니다.';
+	$lang['form_validation_less_than'] = '{field} 필드는 {param}보다 작은 숫자를 포함해야 합니다.';
+	$lang['form_validation_less_than_equal_to'] = '{field} 필드는 {param}보다 작거나 같은 숫자를 포함해야 합니다.';
+	$lang['form_validation_greater_than'] = '{field} 필드는 {param}보다 큰 숫자를 포함해야 합니다.';
+	$lang['form_validation_greater_than_equal_to'] = '{field} 필드는 {param}보다 크거나 같은 숫자를 포함해야 합니다.';
+	$lang['form_validation_error_message_not_set'] = '{field} 필드에 해당하는 에러 메시지를 찾을 수 없습니다.';
+	$lang['form_validation_in_list'] = '{field} 필드는 다음 중 하나여야 합니다: {param}.';
