@@ -1,25 +1,28 @@
-# CodeIgniter 3 Docker 프로젝트
+# CodeIgniter 3 Docker Development Environment
 
 이 프로젝트는 Docker를 사용하여 CodeIgniter 3 애플리케이션을 실행하는 개발 환경입니다.
 
 ## 기술 스택
 
-- **PHP:** 7.4
-- **Web Server:** Apache
-- **Database:** MySQL (Docker 외부에서 실행)
-- **Framework:** CodeIgniter 3
-- **Dependency Manager:** Composer
+*   **Framework**: CodeIgniter 3
+*   **PHP**: 7.4
+*   **Web Server**: Apache
+*   **Database**: MySQL (Docker 외부에서 실행)
+*   **Dependency Manager**: Composer
 
 ## 디렉토리 구조
 
-- **/docker**: Docker 관련 설정 파일 (Apache, PHP)
-- **/src**: 애플리케이션 소스 코드
-  - **/Codeigniter**: CodeIgniter 프레임워크 코어 파일
-    - **/application**: CI 애플리케이션 (컨트롤러, 모델, 뷰)
-    - **/system**: CI 시스템 코어
-    - **/vendor**: Composer 라이브러리
-  - **/public**: 웹 서버의 공개 루트(DocumentRoot). `index.php`, `assets` 폴더 등이 위치합니다.
-  - **/.env**: 환경 변수 설정 파일
+```
+p2p/
+├── docker/              # Docker 설정 파일 (Apache, PHP)
+└── src/                 # 애플리케이션 소스 코드
+    ├── Codeigniter/     # CodeIgniter 프레임워크
+    │   ├── application/ # CI 애플리케이션 (컨트롤러, 모델, 뷰 등)
+    │   ├── system/      # CI 시스템 코어
+    │   └── vendor/      # Composer 라이브러리
+    ├── public/          # 웹 서버 공개 루트 (index.php, assets 등)
+    └── .env             # 환경 변수 설정 파일
+```
 
 ## 실행 방법
 
@@ -27,6 +30,15 @@
 
     ```sh
     docker-compose up -d --build
+    ```
+
+2.  **로그 디렉토리 생성 (필수)**
+
+    CodeIgniter가 생성하는 로그 파일을 저장하기 위한 디렉토리입니다. 이 디렉토리는 `.gitignore`에 등록되어 버전 관리에서 제외되므로, **반드시 수동으로 생성해야 합니다.**
+
+    ```sh
+    # src 폴더 내에 log 디렉토리 생성
+    mkdir -p src/log
     ```
 
 2.  **Composer 의존성 설치**
@@ -41,7 +53,7 @@
 
     웹 브라우저에서 `http://localhost` 로 접속합니다.
 
-## 주요 설정
+## 주요 아키텍처 및 설정
 
 ### 환경 변수 (`.env`)
 

@@ -19,7 +19,7 @@
 				<div class="d-flex justify-content-between align-items-center">
 					<div>
 						<strong>첨부파일: </strong>
-						<a href="/download/board/<?=base64_encode($row->stored_file_name);?>/<?=base64_encode($row->origin_file_name);?>">
+						<a href="/download/board/<?=urlencode($row->stored_file_name);?>/<?=urlencode($row->origin_file_name);?>">
 							<i class="fas fa-download me-1"></i> <?=html_escape($row->origin_file_name);?>
 						</a>
 					</div>
