@@ -25,8 +25,8 @@ class FileDownloadController extends CI_Controller
 	public function download($dir, $storedFileName, $originalFileName)
 	{
 		// Base64로 인코딩된 파일명을 원래대로 디코딩합니다.
-		$storedFileName = base64_decode($storedFileName);
-		$originalFileName = base64_decode($originalFileName);
+		$storedFileName = urldecode($storedFileName);
+		$originalFileName = urldecode($originalFileName);
 
 		// 파일의 전체 경로를 구성합니다.
 		// FCPATH는 public/index.php가 있는 프로젝트 루트를 가리킵니다.

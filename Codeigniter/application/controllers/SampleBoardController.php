@@ -8,6 +8,7 @@
 	 * @property FileuploadService $fileUploadService
 	 * @property PaginationService $paginationService
 	 * @property ExcelDownloadService $excelDownloadService
+	 * @property ExcelUploadService $excelUploadService
 	 */
 	class SampleBoardController extends MY_Controller {
 		public function __construct() {
