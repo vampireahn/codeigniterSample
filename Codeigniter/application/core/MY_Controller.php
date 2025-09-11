@@ -26,8 +26,17 @@
 		
 		public function __construct() {
 			parent::__construct();
+			$this->loadLanguage(); // 0. 언어 파일 로드
 			$this->validateSession(); // 1. 세션 유효성 검증
 			$this->checkAuthorization();  // 2. 인가(Authorization) 확인
+		}
+
+		/**
+		 * 세션을 기반으로 다국어 파일을 로드합니다.
+		 */
+		private function loadLanguage() {
+			$site_lang = $this->session->userdata('site_lang') ?? 'korean'; // 세션에 언어 설정이 없으면 'korean'을 기본값으로 사용
+			$this->lang->load('languagePack', $site_lang);
 		}
 		
 		/**
@@ -43,7 +52,7 @@
 				$this->session->sess_destroy();
 				
 				// 사용자에게 상황을 안내하고, 다시 로그인하도록 유도합니다.
-				$this->session->set_flashdata('notice', '세션이 만료되었습니다. 다시 로그인해주세요.');
+				$this->session->set_flashdata('notice', $this->lang->line('세션이 만료되었습니다. 다시 로그인해주세요.'));
 				redirect('auth/login');
 				exit; // 리디렉션 후 추가 실행을 방지하기 위해 스크립트를 종료합니다.
 			}

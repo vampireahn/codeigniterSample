@@ -40,3 +40,6 @@
 	// File Download (공통)
 	// /download/[디렉토리]/[저장된 파일명]/[원본 파일명]
 	$route['download/(:any)/(:any)/(:any)']['get'] = 'FileDownloadController/download/$1/$2/$3';
+
+	// Language (언어 변경)
+	$route['lang/switch']['post'] = 'LanguageController/switchLanguage';
